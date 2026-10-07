@@ -154,17 +154,15 @@ Representa aproximadamente **28% das candidaturas classificadas**.
 
 ## Principais insights
 
-A segmentação mostrou diferenças relevantes principalmente relacionadas à estrutura financeira das campanhas.
+A aplicação do K-Means permitiu identificar três perfis distintos de candidaturas, diferenciados principalmente pela estrutura financeira:
 
-O grupo de **Maior estrutura financeira** concentra candidaturas com maiores valores medianos de patrimônio, receita e despesa.
+- **Maior estrutura financeira:** maior patrimônio, receita e despesa medianos;
+- **Estrutura financeira intermediária:** movimentação financeira de campanha em níveis intermediários;
+- **Baixa movimentação financeira:** patrimônio, receita e despesa medianos próximos ou iguais a zero.
 
-O grupo de **Estrutura financeira intermediária** apresenta movimentação financeira de campanha, porém em níveis inferiores ao primeiro grupo.
+Após a formação dos clusters, variáveis que não participaram diretamente do modelo, como votos e resultado eleitoral, foram utilizadas para complementar a interpretação dos grupos.
 
-Já o grupo de **Baixa movimentação financeira** apresenta valores medianos próximos ou iguais a zero para patrimônio, receita e despesa.
-
-Também foram observadas diferenças na quantidade mediana de votos entre os grupos. Entretanto, **votos e resultado eleitoral não foram utilizados para formar os clusters**.
-
-Portanto, os resultados devem ser interpretados como **associações observadas entre os perfis**, e não como evidência de que maior estrutura financeira cause melhor desempenho eleitoral.
+Foi observado que o perfil de maior estrutura financeira também apresentou maior mediana de votos e maior presença relativa de candidaturas eleitas. Esses resultados representam associações observadas nos dados e não permitem estabelecer uma relação de causa e efeito.
 
 ---
 
@@ -203,7 +201,7 @@ Permite consultar individualmente as candidaturas e utilizar filtros por candida
 
 ## Dashboard
 
-![Dashboard - Visão Geral](images/dashboard_visao_geral.png)
+![Dashboard - Visão Geral](images/Visão%20Geral.jpeg)
 
 ---
 
@@ -241,7 +239,20 @@ Projeto_GitHub/
 │
 └── README.md
 ```
+## Possíveis aprofundamentos
 
+A segmentação desenvolvida neste projeto pode servir como ponto de partida para novas análises sobre as características das candidaturas presentes em cada cluster.
+
+Como continuidade do estudo, seria possível investigar:
+
+- a distribuição dos partidos políticos entre os diferentes perfis;
+- diferenças de gênero, escolaridade e ocupação entre os clusters;
+- a relação entre os perfis identificados e o resultado eleitoral;
+- a distribuição da quantidade de votos dentro de cada grupo;
+- possíveis padrões geográficos, mediante a inclusão de informações de região ou município;
+- outras características que possam ajudar a compreender as diferenças entre os perfis de candidaturas.
+
+Essas análises poderiam ampliar a interpretação dos clusters, mantendo a segmentação como uma ferramenta exploratória e evitando conclusões causais sobre desempenho eleitoral.
 ---
 
 ## Observações metodológicas
